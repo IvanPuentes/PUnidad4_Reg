@@ -14,7 +14,7 @@
 {% user_display confirmation.email_address.user as user_display %}
    
 
-<p>{% blocktrans with confirmation.email_address.email as email %}Por favor confirme este mensaje <a  id="reset" href="mailto:{{email}}">{{ email }}</a> esto es una direccion ip para el usuario {{ user_display }}.{% endblocktrans %}</p>
+<p>{% blocktrans with confirmation.email_address.email as email %}Por favor confirme este mensaje <a  id="reset" href="mailto:{{email}}">{{ email }}</a> esto es una dirección Ip para el usuario {{ user_display }}.{% endblocktrans %}</p>
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
