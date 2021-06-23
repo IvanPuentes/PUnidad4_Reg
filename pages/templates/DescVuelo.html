@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--descripcion de un Hospedaje   -->
+<ul id="lista_1">
+    <h1> Descripcion del viaje</h1>
+    
+    {% block content %}
+    
+         <!--descripcion de un modelo de hospedaje   -->
+<div id="cont_f">
+    <div id="datos_div">
+        <div><h2>Destino:{{Listado_viajes_des.ciudad}}</h2></div>
+        <img id="img_div" src = {{Listado_viajes_des.img.url}} >
+        <div>Destino:{{Listado_viajes_des.ciudad}}</div>
+        <div>Detalles:{{Listado_viajes_des.descrpicion}}</div>
+        <a type="button" class="btn" href="{% url 'orders' Listado_viajes_des.pk %}" id="btn_comprar"><strong>Pagar: ${{Listado_viajes_des.presio}}</strong></a>
+        
+        
+    </div>
+
+
+    <div id="coment">
+        <div id="coment_1">
+                <h2>Seccion de comentarios</h2>
+            </div>
+            <div id="coment_2">
+            {% for comentario in Listado_viajes_des.comentariosVuelo.all %}
+            <div style="border-bottom: white;border-bottom-style: solid;">
+                <span class="font-wigth-bold"><b>{{comentario.autor}}</b></span><br>
+                <span class="font-wigth-bold">{{ comentario}}</span>
+            </div>	
+            {%endfor%}
+            <br>
+            
+			<a type="button" class="btn btn-primary" href="{% url 'comentarioNuevo' Listado_viajes_des.pk %}" id="btn_rojo_1"><strong>Comentar</strong></a>
+	
+           
+        </div>	
+    </div>
+
+</div>
+
+
+<style>
+    #btn_rojo_1{
+        margin-left: 35%;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+     #coment{
+        width: 45%;
+        float: left;
+        margin-left: 30px;
+        margin-top: 100px;
+        padding-top: 30px;
+       
+
+     }
+     #datos_div{
+        width: 45%;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.548);
+        margin-left: 30px;
+        text-align: center;
+        margin-top: 100px;
+        padding-top: 30px;
+        color: white;
+     }
+
+     #img_div{
+         width: 300px;
+         height: 250px;
+     }
+
+     #coment_1{
+        background-color: rgba(9, 7, 133, 0.836);
+        color: white;
+        text-align: center;
+        border-radius: 50px;
+     }
+
+     #coment_2{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 16px;
+         color: white;
+         background-color: rgba(201, 56, 12, 0.829);
+
+     }
+
+     #cont_f{
+        
+        background-image:url("{% static 'img/hoteles_cancun_.jpg' %}");
+        height: 600px;
+        width: 1350px;
+        background-repeat: repeat;
+        background-position: auto;
+        background-size: cover;
+        background-attachment: fixed;
+     }
+
+     #btn_comprar{
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(128, 128, 128, 0.226);
+    color: indigo;
+    border-radius:10px;
+   
+}
+
+ 
+ </style>
+    {% endblock content %}
+</ul>  
+   
+        
+    
+
+
+				

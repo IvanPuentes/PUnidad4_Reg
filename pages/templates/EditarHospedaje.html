@@ -1,0 +1,88 @@
+<style>
+    p{
+         color: white;
+     }
+     #id_ciudad{
+         width: 350px;
+         height: 30px;
+         margin-left: 35px;
+     }
+     #id_beneficios{
+         width: 350px;
+         height: 30px;
+         margin-left: 10px;
+     }
+     #id_escala{
+         width: 350px;
+         height: 30px;
+         margin-left: 40px;
+     }
+     #id_presio{
+         width: 350px;
+         height: 30px;
+         margin-left: 45px;
+     }
+     #id_img{
+         width: 350px;
+         height: 30px;
+         margin-left: 50px;
+     }
+     #btn_guardar{
+         color:green;
+         width: 150px;
+         height: 40px;
+     }
+     #tit{
+         color: white;
+         font-family: Arial, Helvetica, sans-serif;
+         margin-bottom: 30px;
+     }
+     #conte_vuelo{
+         text-align: center;
+     }
+ 
+ </style>
+ {% extends 'base.html' %}
+ {% load static %}
+<!--valores para ediar del modelo de Hospedaje-->
+{% block content %}
+
+<div id="cont_super">
+    <div id="cont_vu">
+    <h1 id="tit">Editar Hospedaje</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{form.media}}
+        {{form.as_p}}
+      <input type="submit" id="btnjs" value="Guardar" id="btn_guardar"> 
+    </form>
+
+</div>
+   
+
+</div>
+
+
+<style>
+	#cont_vu{
+        background-color: rgba(0, 0, 0, 0.473);
+        width: 700px;
+        margin-left: 300px;
+    }
+    #cont_super{
+        padding-top: 50px;
+         text-align: center;
+        background-image:url("{% static 'img/hosp2.jpg' %}");
+        height: 600px;
+        width: 1350px;
+        background-repeat: repeat;
+        background-position: auto;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+</style>
+
+{%endblock content %}

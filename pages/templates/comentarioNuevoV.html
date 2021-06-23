@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="conte_vuelo">
+    <div id="cont_vu">
+        <h1> Comentarios</h1>
+        <p>Agregar un comentario </p>
+        <form action="" method="post">{% csrf_token %} 
+            {{form.as_p}}
+           
+        <input type="submit" value="Guardar" class="btn btn-primary" id="btn_guardar"> 
+        </form>
+    </div>
+</div>
+
+
+<style>
+    #btn_guardar{
+        margin-top: -150px;
+    }
+
+    #id_Viaje{
+       opacity: 0;
+       margin-left: 900px;
+    }
+    label{
+        opacity: 0;
+    }
+    #cont_vu{
+       background-color: rgba(0, 0, 0, 0.473);
+       width: 700px;
+       margin-left: 300px;
+       height: 300px;
+   }
+   #id_comentario{
+       padding-top: 20px;
+       width: 400px;
+       height: 100px;
+       margin-left: -100px;
+   }
+   
+   #conte_vuelo{
+       padding-top: 50px;
+        text-align: center;
+       background-image:url("{% static 'img/hosp2.jpg' %}");
+       height: 600px;
+       width: 1350px;
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       position: relative;
+       
+       color: white;
+   }
+
+</style>
+
+{%endblock content %}

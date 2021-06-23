@@ -1,0 +1,176 @@
+
+<!--Agregar el archivo base -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!--creacion del archivo de acerca de de la empresa que contendra la informacion de la empresa ademas de
+un boton que te direccionara a la pagina del tecnologico  -->
+<div id="up_tit"><h3>Acerca de Go Travel</h3></div>
+
+<div id="contabout1">
+          
+            <div id="contenedor_1">
+                <h3 style="text-align: center;">Conoce mas acerca de nuestra Mision</h3>
+                <button id="btnjs1" class="btn btn-success">Ver mas ...</button>
+            </div>
+</div> 
+
+
+<div style="background-color: royalblue;width: 1370px;height: 200px;">
+</div>
+
+<div id="contabout2">
+       
+        <div id="contenedor_2">
+            <h3 style="text-align: center;">Conoce mas acerca de nuestra Vision</h3>
+            <button id="btnjs2" class="btn btn-success">Ver mas ...</button>
+        </div>
+</div> 
+
+
+
+
+
+
+<div style="background-color: rgb(1, 71, 22);width: 1370px;height: 200px;">
+</div>
+<div id="contabout3">
+       
+        <div style="height: 60%;">
+           
+            <div id="contenedor_3">
+                <h3 style="text-align: center;">Conoce mas acerca de nuestros Objetivos</h3>
+                <button id="btnjs3" class="btn btn-success">Ver mas ...</button>
+            </div>
+           
+</div> 
+
+
+<script>
+    $(document).ready(function(){
+      $("#btnjs1").click(function(){
+        Swal.fire(
+        'Mision',
+        'nuestra mision es ser la mejor empresa de transporte del pais ademas de ser una de las empresas mas grandes que exista',
+        'success'
+        )
+    })
+  })
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("#btnjs2").click(function(){
+        Swal.fire(
+        'Vision',
+        'ser una de las 5 empresas principales de viaje en el mundo otorgando el ejor serviso a nuestros clientes',
+        'success'
+        )
+    })
+  })
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("#btnjs3").click(function(){
+        Swal.fire(
+        'Objetivos',
+        'Cumplir con las necesidades del cliente, Que nuestros paquetes de hoteles y viajes sean los mejores, Realizar el mejor tiempo en atencio al cliente, Atender todas la cesidades de nuestros clientes',
+        'success'
+        )
+    })
+  })
+</script>
+
+
+
+
+
+<style>
+  
+    #contenedor_1{
+        height: 500px ;
+        width: 350px; 
+        background-color: rgba(28, 51, 184, 0.815);
+        padding-top: 200px;
+        margin-left: 30px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+       
+
+    }
+    
+    #contenedor_2{
+        height: 500px ;
+        width: 350px; 
+        background-color: rgba(190, 65, 7, 0.699);
+        padding-top: 200px;
+        margin-left: 900px;
+        color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+       
+
+    }
+
+    #contenedor_3{
+        height: 500px ;
+        width: 350px; 
+        margin-left: 30px;
+        background-color: rgba(185, 4, 4, 0.74);
+        padding-top: 200px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        
+
+    }
+    #contabout1{
+      
+        background-image:url("{% static 'img/hosp.jpg' %}");
+        text-align: center;
+		height: 500px;
+		width: 1350px;
+		background-repeat: no-repeat;
+        background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+       
+        
+		
+          
+    }
+    #contabout2{
+        width: 1350px;
+        height: 500px;
+        background-image:url("{% static 'img/reset2.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+        
+        
+    }
+    #contabout3{
+        width: 1350px;
+        height: 500px;
+        background-image:url("{% static 'img/lugares.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+        text-align:center;
+        
+    }
+    #up_tit{
+        text-align: center;
+        border-bottom-color:rgba(14, 13, 13, 0.219);
+        border-bottom-style: solid;
+
+    }
+    
+</style>
+
+{% endblock content %}

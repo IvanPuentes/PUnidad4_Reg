@@ -1,0 +1,61 @@
+<style>
+  #tit{
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+    
+ }
+
+ #btn_guardar{
+     color:red;
+     width: 150px;
+     height: 40px;
+     
+ }
+ #img_div{
+     width: 300;
+     height: 250px;
+     margin-bottom: 30px;
+ }
+</style>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--Formulario para eliminar-->
+<div id="cont_super">
+<div id="cont_vu">
+<h2 id="tit">Seguro que deseas eliminar el registro ?</h2>
+<img id="img_div" src = {{Listado_viajes_des.img.url}} >
+
+<h3 id="tit"> presio : ${{Listado_viajes_des.ciudad}}</h3>
+<h3 id="tit"> presio : ${{Listado_viajes_des.presio}}</h3>
+    <form action="" method="post">
+            {% csrf_token %} 
+            {{form.as_p}}
+        <input type="submit" value="Confirmar" id="btn_guardar"> 
+    </form>
+</div>
+</div>
+<style>
+#cont_vu{
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 700px;
+    height: 500px;
+    margin-left: 300px;
+}
+#cont_super{
+    padding-top: 50px;
+     text-align: center;
+    background-image:url("{% static 'img/hosp2.jpg' %}");
+    height: 600px;
+    width: 1350px;
+    background-repeat: repeat;
+    background-position: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+</style>
+{%endblock content %}
+
