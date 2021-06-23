@@ -17,6 +17,8 @@
 <form action="{% url 'charge' %}" method="post">
     {% csrf_token %}
     <input type="hidden" value="{{Listado_viajes_des.presio}}00" id="canitdad" name="cantidad">
+    <p>Para recibir correo de confirmacion por favor ingrese un email valido</p>
+    <input  id="email" name="email">
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="{{ stripe_key }}"
         data-description="Acceso total"

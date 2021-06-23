@@ -5,6 +5,8 @@ from django.conf import settings
 from django.shortcuts import render
 from django.contrib.auth.models import Permission
 from mipagina.models import Vuelo,Viaje,Hospedaje
+from django.core.mail import send_mail
+from django.conf import settings
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 
 class OrdersPageView(DetailView):
@@ -20,8 +22,15 @@ class OrdersPageView(DetailView):
 
 def charge(request):
     
+
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
+        sub = "Agradecimiento de pago"
+        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        email_from="ivan.puentes2525@gmail.com"
+        recipent_list=[request.POST["email"]]
+
+        send_mail(sub,message,email_from,recipent_list)
         charge = stripe.Charge.create(
             amount = cantidad,
             currency='usd',
@@ -47,6 +56,12 @@ def charge(request):
      
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
+        sub = "Agradecimiento de pago"
+        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        email_from="ivan.puentes2525@gmail.com"
+        recipent_list=[request.POST["email"]]
+
+        send_mail(sub,message,email_from,recipent_list)
         charge = stripe.Charge.create(
             amount = cantidad,
             currency='usd',
@@ -71,6 +86,12 @@ def charge(request):
      
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
+        sub = "Agradecimiento de pago"
+        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        email_from="ivan.puentes2525@gmail.com"
+        recipent_list=[request.POST["email"]]
+
+        send_mail(sub,message,email_from,recipent_list)
         charge = stripe.Charge.create(
             amount = cantidad,
             currency='usd',

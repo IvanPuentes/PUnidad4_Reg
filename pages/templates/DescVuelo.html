@@ -13,6 +13,7 @@
         <img id="img_div" src = {{Listado_viajes_des.img.url}} >
         <div>Destino:{{Listado_viajes_des.ciudad}}</div>
         <div>Detalles:{{Listado_viajes_des.descrpicion}}</div>
+        <div>Detalles:{{Listado_viajes_des.escala}}</div>
         <a type="button" class="btn" href="{% url 'orders' Listado_viajes_des.pk %}" id="btn_comprar"><strong>Pagar: ${{Listado_viajes_des.presio}}</strong></a>
         
         
