@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import HomePageView,RegistrarView,CreateViajesView,CreateVuelosView,VueloPageView,CreateHospedajeView,HospedajePageView,UpdatePageView,UpdateVueloPageView,UpdateHospedajePageView,DescripViajesPageView,DescripVuelosPageView,DescripHospPageView,ViajeDeleteView,AboutPageView,ComentarioCreateView,SearchResultListview,VueloDeleteView,HospDeleteView,ComentarioViajeCreateView,ComentarioHospCreateView,SearchResulHosptListview,SearchResulViajetListview,CreateCiudadView
+from .views import HomePageView,RegistrarView,CreateViajesView,CreateVuelosView,VueloPageView,CreateHospedajeView,HospedajePageView,UpdatePageView,UpdateVueloPageView,UpdateHospedajePageView,DescripViajesPageView,DescripVuelosPageView,DescripHospPageView,ViajeDeleteView,AboutPageView,ComentarioCreateView,SearchResultListview,VueloDeleteView,HospDeleteView,ComentarioViajeCreateView,ComentarioHospCreateView,SearchResulHosptListview,SearchResulViajetListview
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 #importar las librerias y los archivos 
 
@@ -30,7 +30,6 @@ urlpatterns=[
     path('search', SearchResultListview.as_view(), name='search_result'),
     path('searchHosp', SearchResulHosptListview.as_view(), name='search_result_hosp'),
     path('searchViaje', SearchResulViajetListview.as_view(), name='search_result_viaje'),
-    path('Nuevo/Ciudad',CreateCiudadView.as_view(),name='Ciudad'),
    
     
 

@@ -69,16 +69,6 @@ class CreateHospedajeView(LoginRequiredMixin,PermissionRequiredMixin,CreateView)
      permission_required = ('mipagina.add_access')
      login_url = 'account_login'
 
-class CreateCiudadView(LoginRequiredMixin,PermissionRequiredMixin,CreateView):
-     model = Ciudad
-     success_url = reverse_lazy('home')
-     template_name = "createCiudad.html"
-     fields = 'nombre',
-     context_object_name='Listado1'
-     permission_required = ('mipagina.add_access')
-     login_url = 'account_login'
-     
-
 #vista de la pagina para editar los vuelos
 class UpdatePageView(LoginRequiredMixin,PermissionRequiredMixin,UpdateView):
      template_name = 'EditarViaje.html'
@@ -196,7 +186,7 @@ class ComentarioHospCreateView(LoginRequiredMixin,CreateView):
         form.instance.hospedaje = Hospedaje.objects.get(pk=self.kwargs.get('HospComent'))
         return super().form_valid(form) 
 
-
+#view de busqueda de vuelos
 class SearchResultListview(ListView):
     model = Vuelo
     context_object_name = 'listaBook'
@@ -208,7 +198,7 @@ class SearchResultListview(ListView):
         return Vuelo.objects.filter(
             Q(ciudad__icontains=query)
         )
-
+#view de busqueda de hospedaje
 class SearchResulHosptListview(ListView):
     model = Hospedaje
     context_object_name = 'listaBook'
@@ -221,6 +211,7 @@ class SearchResulHosptListview(ListView):
         return Hospedaje.objects.filter(
             Q(ciudad__icontains=query)
         )
+#view de busqueda de viajes
 class SearchResulViajetListview(ListView):
     model = Viaje
     context_object_name = 'listaBook'

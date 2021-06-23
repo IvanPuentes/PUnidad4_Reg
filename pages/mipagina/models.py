@@ -93,7 +93,7 @@ class ComentarioVuelo(models.Model):
         
     def __str__(self):
         return self.comentario
-    
+#modelo de comentarios al hospedaje    
 class ComentarioViaje(models.Model):
     comentario = models.TextField(default="")
     Viaje = models.ForeignKey(
@@ -106,7 +106,7 @@ class ComentarioViaje(models.Model):
     def __str__(self):
         return self.comentario
     
-
+#modelo de comentarios al hospedaje
 class ComentarioHosp(models.Model):
     comentario = models.TextField(default="")
     Hospedaje = models.ForeignKey(

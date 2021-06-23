@@ -9,6 +9,8 @@ from django.core.mail import send_mail
 from django.conf import settings
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 
+
+#view de de la compra de vuelos con correo para confirmacion
 class OrdersPageView(DetailView):
     model = Vuelo
     context_object_name='Listado_viajes_des'
@@ -40,7 +42,7 @@ def charge(request):
     return render(request, 'orders/charge.html')
 
 
-
+#view de de la compra de viajes con correo para confirmacion
 class OrdersViajePageView(DetailView):
     model = Viaje
     context_object_name='Listado_viajes_des'
@@ -70,7 +72,7 @@ def charge(request):
         )
     return render(request, 'orders/charge.html')
 
-        
+#view de de la compra de hospedajes con correo para confirmacion        
 class OrdersHospPageView(DetailView):
     model = Hospedaje
     context_object_name='Listado_viajes_des'

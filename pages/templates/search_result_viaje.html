@@ -26,7 +26,7 @@
 {% block content %}
 
 {% for hosp in listaBook  %}
-
+<!--busquedas peronalizados de los registros viaje-->
     <div id="cont_v">
         <h2><a  href="{% url 'DescViajes' hosp.pk %}">{{ hosp.ciudad }}</a></h2>
         <li id="lista">Descripcion:{{ hosp.descrpicion}}</li>
