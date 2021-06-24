@@ -27,8 +27,9 @@ def charge(request):
 
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
-        sub = "Agradecimiento de pago"
-        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        ciudad = request.POST["ciudad"]
+        sub = "Registro de pago de Viaje" 
+        message = "Gracias por realizar el pago del Viaje con destino a "+ ciudad +" "+ "por la cantidad de "+ cantidad
         email_from="ivan.puentes2525@gmail.com"
         recipent_list=[request.POST["email"]]
 
@@ -58,8 +59,9 @@ def charge(request):
      
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
-        sub = "Agradecimiento de pago"
-        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        ciudad = request.POST["ciudad"]
+        sub = "Registro de pago de Viaje" 
+        message = "Gracias por realizar el pago del Viaje con destino a "+ ciudad +" "+ "por la cantidad de "+ cantidad
         email_from="ivan.puentes2525@gmail.com"
         recipent_list=[request.POST["email"]]
 
@@ -88,8 +90,9 @@ def charge(request):
      
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
-        sub = "Agradecimiento de pago"
-        message = "Gracias por realizar el pago del Hospedaje"+" "+ "por la cantidad de "+cantidad
+        ciudad = request.POST["ciudad"]
+        sub = "Registro de pago de Viaje" 
+        message = "Gracias por realizar el pago del Viaje con destino a "+ ciudad +" "+ "por la cantidad de "+ cantidad
         email_from="ivan.puentes2525@gmail.com"
         recipent_list=[request.POST["email"]]
 

@@ -128,7 +128,7 @@
 		
 		<h4 id="titulos_h4_su">Registro de Vuelos</h4>
 		<div>
-		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateVuelo' %}">Agreagar</a>
+		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateVuelo' %}">Agregar</a>
 		</div>
 			{%for post in Listado_vuelo %}
 				<div id="viajes_cont" >
@@ -136,10 +136,10 @@
 					
 						<img id="home_img" src = {{post.img.url}} >
 						<li id="li_titulo_bd_1">Destino: {{ post.ciudad }}</li>
-						<li id="li_titulo_bd_1">Descrpicion: {{ post.descrpicion }}</li>
+						<li id="li_titulo_bd_1">Descrpición: {{ post.descrpicion }}</li>
 						
 						<li id="li_titulo_bd_1">Escala:{{ post.escala }}</li>
-                        <li id="li_titulo_bd_1">Presio:$ {{ post.presio }}</li>
+                        <li id="li_titulo_bd_1">Precio:$ {{ post.presio }}</li>
 						<div>
 							<a type="button" id="btn_azul" class="btn" href="{%url 'EditarVuelo' post.pk %}">Editar</a>
 						</div>
@@ -214,7 +214,7 @@
 			<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
 				
-				<li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
 				
 				<div>
 					<a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescVuelos' post.pk %}"><strong>Ver mas...</strong></a>
@@ -273,7 +273,7 @@
 
 			<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
-				<li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
 				<div>
 					<a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescVuelos' post.pk %}"><strong>ver mas...</strong></a>
 				</div>

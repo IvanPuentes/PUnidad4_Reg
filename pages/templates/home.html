@@ -127,7 +127,7 @@
 			
 		<h4 id="titulos_h4_su">Registro de Viajes</h4>
 		<div>
-		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateViaje' %}">Agreagar</a>
+		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateViaje' %}">Agregar</a>
 		</div>
 
 		<div >
@@ -136,8 +136,8 @@
 
 						<img id="home_img" src = {{post.img.url}} >
 						<li id="li_titulo_bd_1">Destino: {{ post.ciudad }}</li>
-						<li id="li_titulo_bd_1">Descrpicion: {{ post.descrpicion }}</li>
-						<li id="li_titulo_bd_1">Presio:$ {{ post.presio }}</li>
+						<li id="li_titulo_bd_1">Descrpición: {{ post.descrpicion }}</li>
+						<li id="li_titulo_bd_1">Precio:$ {{ post.presio }}</li>
 						<li id="li_titulo_bd_1">Numero de Noches:{{ post.noches }}</li>
 						<div>
 							<a type="button" id="btn_azul" class="btn"  href="{%url 'EditarViaje' post.pk %}">Editar</a>
@@ -214,8 +214,8 @@
 
 				<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
-				<li id="li_titulo_bd">Descrpicion: {{ post.descrpicion }}</li>
-				<li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Descrpición: {{ post.descrpicion }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
 				<li id="li_titulo_bd">Numero de Noches:{{ post.noches }}</li>
 			
 				<div>
@@ -268,11 +268,14 @@
 
 		{%for post in Listado %}
 		<div id="viajes_cont_1">
+			  
+  
+
 
 				<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
-				<li id="li_titulo_bd">Descrpicion: {{ post.descrpicion }}</li>
-				<li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Descripción: {{ post.descrpicion }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
 				<li id="li_titulo_bd">Numero de Noches:{{ post.noches }}</li>
 				<div>
 					<a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescViajes' post.pk %}"><strong>Comprar</strong></a>

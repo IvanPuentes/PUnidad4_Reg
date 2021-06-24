@@ -126,7 +126,7 @@
 		
 		<h4 id="titulos_h4_su">Registro de Hospedaje</h4>
 		<div>
-		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateHospedaje' %}">Agreagar</a>
+		  <a type="button" id="btn_verde" class="btn" href="{% url 'CreateHospedaje' %}">Agregar</a>
 		</div>
 
 		<div >
@@ -136,8 +136,8 @@
 						
 						<img id="home_img" src = {{post.img.url}} >
 						<li id="li_titulo_bd_1">Destino: {{ post.ciudad }}</li>
-						<li id="li_titulo_bd_1">Benefisios: {{ post.beneficios }}</li>
-						<li id="li_titulo_bd_1">Presio:$ {{ post.presio }}</li>
+						<li id="li_titulo_bd_1">Beneficios: {{ post.beneficios }}</li>
+						<li id="li_titulo_bd_1">Precio:$ {{ post.presio }}</li>
 						<div>
 							<a type="button" id="btn_azul" class="btn"  href="{%url 'EditarHospedaje' post.pk %}">Editar</a>
 						</div>
@@ -217,8 +217,8 @@
 
 				<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
-				<li id="li_titulo_bd">Descrpicion: {{ post.beneficios }}</li>
-				<li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Descrpición: {{ post.beneficios }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
 				
 				<div>
 					<a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescHosp' post.pk %}"><strong>Ver mas...</strong></a>
@@ -283,8 +283,8 @@
 
 		  <img id="home_img" src = {{post.img.url}} >
           <li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
-          <li id="li_titulo_bd">Descrpicion: {{ post.beneficios }}</li>
-          <li id="li_titulo_bd">Presio:$ {{ post.presio }}</li>
+          <li id="li_titulo_bd">Descrpición: {{ post.beneficios }}</li>
+          <li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
           <div>
               <a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescHosp' post.pk %}"><strong>Ver mas...</strong></a>
           </div>
