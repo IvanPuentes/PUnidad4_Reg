@@ -29,7 +29,7 @@ class Ciudad(models.Model):
 class Hospedaje(models.Model):
     ciudad = models.TextField(default="")
     beneficios = models.TextField(default="")
-    presio = models.TextField(default="")
+    precio = models.TextField(default="")
     img =models.ImageField(null=True, blank=True, upload_to="images/")
   
     class Meta:
@@ -48,7 +48,7 @@ class Vuelo(models.Model):
     ciudad = models.TextField(default="")
     descrpicion = models.TextField(default="")
     escala = models.TextField(default="")
-    presio = models.TextField(default="")
+    precio = models.TextField(default="")
     img = models.ImageField(null=True, blank=True, upload_to="images/")
     
     class Meta:
@@ -66,7 +66,7 @@ class Vuelo(models.Model):
 class Viaje(models.Model):
     ciudad = models.TextField(default="")
     descrpicion = models.TextField(default="")
-    presio = models.TextField(default="")
+    precio = models.TextField(default="")
     img = models.ImageField(null=True, blank=True, upload_to="images/")
     noches = models.TextField(default="")
 
