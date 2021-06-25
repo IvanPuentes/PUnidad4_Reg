@@ -31,7 +31,7 @@
         <h2><a  href="{% url 'DescViajes' hosp.pk %}">{{ hosp.ciudad }}</a></h2>
         <li id="lista">Descripcion:{{ hosp.descrpicion}}</li>
         <li id="lista">Escala:{{ hosp.escala}}</li>
-        <li id="lista">Presio:{{hosp.presio}}</li>
+        <li id="lista">precio:{{hosp.precio}}</li>
         <img id="home_img" src = {{hosp.img.url}} >
     </div>
 {% endfor %}

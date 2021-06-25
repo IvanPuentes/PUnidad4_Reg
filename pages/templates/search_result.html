@@ -31,7 +31,7 @@
         <h2><a  href="{% url 'DescVuelos' vuelo.pk %}">{{ vuelo.ciudad }}</a></h2>
         <li id="lista">Descripcion:{{ vuelo.descrpicion}}</li>
         <li id="lista">Escala:{{ vuelo.escala}}</li>
-        <li id="lista">Presio:{{vuelo.presio}}</li>
+        <li id="lista">Precio:{{vuelo.precio}}</li>
         <img id="home_img" src = {{vuelo.img.url}} >
     </div>
 {% endfor %}

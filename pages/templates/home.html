@@ -137,7 +137,7 @@
 						<img id="home_img" src = {{post.img.url}} >
 						<li id="li_titulo_bd_1">Destino: {{ post.ciudad }}</li>
 						<li id="li_titulo_bd_1">Descrpición: {{ post.descrpicion }}</li>
-						<li id="li_titulo_bd_1">Precio:$ {{ post.presio }}</li>
+						<li id="li_titulo_bd_1">Precio:$ {{ post.precio }}</li>
 						<li id="li_titulo_bd_1">Numero de Noches:{{ post.noches }}</li>
 						<div>
 							<a type="button" id="btn_azul" class="btn"  href="{%url 'EditarViaje' post.pk %}">Editar</a>
@@ -215,7 +215,7 @@
 				<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
 				<li id="li_titulo_bd">Descrpición: {{ post.descrpicion }}</li>
-				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.precio }}</li>
 				<li id="li_titulo_bd">Numero de Noches:{{ post.noches }}</li>
 			
 				<div>
@@ -275,7 +275,7 @@
 				<img id="home_img" src = {{post.img.url}} >
 				<li id="li_titulo_bd"><strong>Destino: {{ post.ciudad }}</strong></li>
 				<li id="li_titulo_bd">Descripción: {{ post.descrpicion }}</li>
-				<li id="li_titulo_bd">Precio:$ {{ post.presio }}</li>
+				<li id="li_titulo_bd">Precio:$ {{ post.precio }}</li>
 				<li id="li_titulo_bd">Numero de Noches:{{ post.noches }}</li>
 				<div>
 					<a type="button" id="btn_rojo_1" class="btn"  href="{% url 'DescViajes' post.pk %}"><strong>Comprar</strong></a>

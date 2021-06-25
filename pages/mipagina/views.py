@@ -14,19 +14,19 @@ class HomePageView(ListView):
     template_name = 'home.html'
     model = Viaje
     context_object_name='Listado'
-    fields = 'ciudad','descrpicion','presio','img','noches',
+    fields = 'ciudad','descrpicion','precio','img','noches',
 #vista de la pagina principal de vuelos
 class VueloPageView(ListView):
     template_name = 'vuelo.html'
     model = Vuelo
     context_object_name='Listado_vuelo'
-    fields = 'ciudad','descrpicion','escala','presio','img',
+    fields = 'ciudad','descrpicion','escala','precio','img',
 #vista de la pagina principal de hospedaje
 class HospedajePageView(ListView):
     template_name = 'hospedaje.html'
     model = Hospedaje
     context_object_name='Listado_hosp'
-    fields = 'ciudad','beneficios','presio','img',
+    fields = 'ciudad','beneficios','precio','img',
     
 #vista de la pagina principal de acerca de 
 class AboutPageView(ListView):
@@ -45,7 +45,7 @@ class CreateViajesView(LoginRequiredMixin,PermissionRequiredMixin,CreateView):
      model = Viaje
      success_url = reverse_lazy('home')
      template_name = "CreateViaje.html"
-     fields = 'ciudad','descrpicion','presio','img','noches',
+     fields = 'ciudad','descrpicion','precio','img','noches',
      context_object_name='Listado1'
      permission_required = ('mipagina.usuarioPerTot')
      login_url = 'account_login'
@@ -54,7 +54,7 @@ class CreateVuelosView(LoginRequiredMixin,PermissionRequiredMixin,CreateView):
      model = Vuelo
      success_url = reverse_lazy('vuelo')
      template_name = "CreateVuelo.html"
-     fields = 'ciudad','descrpicion','escala','presio','img',
+     fields = 'ciudad','descrpicion','escala','precio','img',
      context_object_name='Listado1'
      permission_required = ('mipagina.usuariocomun')
      login_url = 'account_login'
@@ -64,7 +64,7 @@ class CreateHospedajeView(LoginRequiredMixin,PermissionRequiredMixin,CreateView)
      model = Hospedaje
      success_url = reverse_lazy('hospedaje')
      template_name = "CreateHospedaje.html"
-     fields = 'ciudad','beneficios','presio','img',
+     fields = 'ciudad','beneficios','precio','img',
      context_object_name='Listado1'
      permission_required = ('mipagina.add_access')
      login_url = 'account_login'
@@ -74,7 +74,7 @@ class UpdatePageView(LoginRequiredMixin,PermissionRequiredMixin,UpdateView):
      template_name = 'EditarViaje.html'
      model = Viaje
      success_url = reverse_lazy('home')
-     fields = 'ciudad','descrpicion','presio','img','noches',
+     fields = 'ciudad','descrpicion','precio','img','noches',
      permission_required = ('mipagina.usuarioPerTot')
      login_url = 'account_login'
 
@@ -83,7 +83,7 @@ class UpdateVueloPageView(LoginRequiredMixin,PermissionRequiredMixin,UpdateView)
      template_name = 'EditarVuelo.html'
      model = Vuelo
      success_url = reverse_lazy('vuelo')
-     fields = 'ciudad','descrpicion','escala','presio','img',
+     fields = 'ciudad','descrpicion','escala','precio','img',
      permission_required = ('mipagina.usuariocomun')
      login_url = 'account_login'
 #vista de la pagina para editar los hospedajes
@@ -91,7 +91,7 @@ class UpdateHospedajePageView(LoginRequiredMixin,PermissionRequiredMixin,UpdateV
      template_name = 'EditarHospedaje.html'
      model = Hospedaje
      success_url = reverse_lazy('hospedaje')
-     fields = 'ciudad','beneficios','presio','img',
+     fields = 'ciudad','beneficios','precio','img',
      permission_required = ('mipagina.add_access')
      login_url = 'account_login'
 
@@ -101,21 +101,21 @@ class DescripViajesPageView(LoginRequiredMixin,DetailView):
      template_name = 'DescViajes.html'
      model = Viaje
      context_object_name='Listado_viajes_des'
-     fields = 'ciudad','descrpicion','presio','img','noches',
+     fields = 'ciudad','descrpicion','precio','img','noches',
      login_url = 'account_login'
 #vista de la pagina para describir los vuelos
 class DescripVuelosPageView(LoginRequiredMixin,DetailView):
      template_name = 'DescVuelo.html'
      model = Vuelo
      context_object_name='Listado_viajes_des'
-     fields = 'ciudad','descrpicion','escala','presio','img',
+     fields = 'ciudad','descrpicion','escala','precio','img',
      login_url = 'account_login' 
 #vista de la pagina para describir los hospedajes
 class DescripHospPageView(LoginRequiredMixin,DetailView):
      template_name = 'DescHosp.html'
      model = Hospedaje
      context_object_name='Listado_viajes_des'
-     fields = 'ciudad','beneficios','presio','img',
+     fields = 'ciudad','beneficios','precio','img',
      login_url = 'account_login'  
 
 #vista de la pagina para borrar los viajes

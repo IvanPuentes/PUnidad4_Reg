@@ -14,7 +14,7 @@ stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 class OrdersPageView(DetailView):
     model = Vuelo
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','escala','presio','img',
+    fields = 'ciudad','descrpicion','escala','precio','img',
     template_name = 'orders/purchase.html'
 
     def get_context_data(self, **kwargs):
@@ -47,7 +47,7 @@ def charge(request):
 class OrdersViajePageView(DetailView):
     model = Viaje
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','presio','img','noches',
+    fields = 'ciudad','descrpicion','precio','img','noches',
     template_name = 'orders/purchaseViaje.html'
 
     def get_context_data(self, **kwargs):
@@ -78,7 +78,7 @@ def charge(request):
 class OrdersHospPageView(DetailView):
     model = Hospedaje
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','presio','img','noches',
+    fields = 'ciudad','descrpicion','precio','img','noches',
     template_name = 'orders/purchaseHops.html'
 
     def get_context_data(self, **kwargs):
