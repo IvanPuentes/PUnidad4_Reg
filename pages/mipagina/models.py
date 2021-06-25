@@ -46,7 +46,7 @@ class Hospedaje(models.Model):
 #modelo de vuelo en la base de datos 
 class Vuelo(models.Model):
     ciudad = models.TextField(default="")
-    descrpicion = models.TextField(default="")
+    descripcion = models.TextField(default="")
     escala = models.TextField(default="")
     precio = models.TextField(default="")
     img = models.ImageField(null=True, blank=True, upload_to="images/")
@@ -65,7 +65,7 @@ class Vuelo(models.Model):
 #modelo de viaje en la base de datos 
 class Viaje(models.Model):
     ciudad = models.TextField(default="")
-    descrpicion = models.TextField(default="")
+    descripcion = models.TextField(default="")
     precio = models.TextField(default="")
     img = models.ImageField(null=True, blank=True, upload_to="images/")
     noches = models.TextField(default="")

@@ -20,7 +20,7 @@
         <input type="hidden" value="{{Listado_viajes_des.presio}}" id="canitdad" name="cantidad">
         <p>Gracias por realizar la compra en vreve recibira un mensaje de confirmacion</p>
         <input value=" {{ user.email }}" type="hidden"  id="email" name="email">
-
+        <input value="{{Listado_viajes_des.ciudad}}" type="hidden"  id="ciudad" name="ciudad">
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="{{ stripe_key }}"
             data-description="Acceso total"
