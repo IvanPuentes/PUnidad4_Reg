@@ -14,7 +14,7 @@ stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 class OrdersPageView(DetailView):
     model = Vuelo
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','escala','precio','img',
+    fields = 'ciudad','descripcion','escala','precio','img',
     template_name = 'orders/purchase.html'
 
     def get_context_data(self, **kwargs):
@@ -28,7 +28,7 @@ def charge(request):
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
         ciudad = request.POST["ciudad"]
-        sub = "Registro de pago de Viaje" 
+        sub = "Registro de pago de Vuelo" 
         message = "Gracias por realizar el pago del Vuelo con destino a "+ ciudad +" "+ "por la cantidad de "+ cantidad
         email_from="ivan.puentes2525@gmail.com"
         recipent_list=[request.POST["email"]]
@@ -47,7 +47,7 @@ def charge(request):
 class OrdersViajePageView(DetailView):
     model = Viaje
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','precio','img','noches',
+    fields = 'ciudad','descripcion','precio','img','noches',
     template_name = 'orders/purchaseViaje.html'
 
     def get_context_data(self, **kwargs):
@@ -78,7 +78,7 @@ def charge(request):
 class OrdersHospPageView(DetailView):
     model = Hospedaje
     context_object_name='Listado_viajes_des'
-    fields = 'ciudad','descrpicion','precio','img','noches',
+    fields = 'ciudad','descripcion','precio','img','noches',
     template_name = 'orders/purchaseHops.html'
 
     def get_context_data(self, **kwargs):
@@ -91,7 +91,7 @@ def charge(request):
     if request.method == 'POST':
         cantidad = request.POST["cantidad"]
         ciudad = request.POST["ciudad"]
-        sub = "Registro de pago de Viaje" 
+        sub = "Registro de pago de Hospedaje" 
         message = "Gracias por realizar el pago del Hospedaje con destino a "+ ciudad +" "+ "por la cantidad de "+ cantidad
         email_from="ivan.puentes2525@gmail.com"
         recipent_list=[request.POST["email"]]

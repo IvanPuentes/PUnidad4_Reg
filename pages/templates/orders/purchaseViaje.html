@@ -13,12 +13,12 @@
     <h1>Registro de pago</h1>
     <!--registro de compra del viaje se paso informacion para peronalizarlo-->
     <p >Gracias por preferir nuestra empresa por <br>
-        el costo de tu servicoo sera de ${{Listado_viajes_des.presio}}</p>
+        el costo de tu servicio sera de ${{Listado_viajes_des.precio}}</p>
     <img id="img_div" src = {{Listado_viajes_des.img.url}} >
     <form action="{% url 'charge' %}" method="post">
         {% csrf_token %}
         
-        <input type="hidden" value="{{Listado_viajes_des.presio}}" id="canitdad" name="cantidad">
+        <input type="hidden" value="{{Listado_viajes_des.precio}}" id="cantidad" name="cantidad">
         <p>Gracias por realizar la compra en vreve recibira un mensaje de confirmacion</p>
         <input value=" {{ user.email }}" type="hidden"  id="email" name="email">
 
@@ -27,7 +27,7 @@
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
             data-key="{{ stripe_key }}"
             data-description="Acceso total"
-            data-amount="{{Listado_viajes_des.presio}}00"
+            data-amount="{{Listado_viajes_des.precio}}00"
             data-locale="auto">
         </script>
    
